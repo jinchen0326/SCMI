@@ -11,22 +11,25 @@ The full source code will be released publicly upon acceptance of the paper.
 ```bash
 pip install torch==1.13.0+cu117 torchvision==0.14.0+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
 pip install -r requirements.txt
-
-# Pretrained checkpoints
+```
+## Data
+The full source data will be released publicly upon acceptance of the paper.
+## Pretrained checkpoints
 ```bash
 - `f30k_gru_scratch.pth`: on Flickr30K, GRU, trained from scratch.
----
+```
 
-## Training
+### Training
 All config files can be found in the `config` folder. To run training, find the config file corresponding to the settings you want to run, make adjustments for your environment, hyperparameters, etc., and launch training with:
 ```bash
 # Flickr30K, GRU as text encoder, train with 4 GPUs
 python -m main.train --cfg config/f30/gru.yaml \
     DISTRIBUTED.world_size 4 TRAIN.num_workers 12
-## Testing
-
+```
+### Testing
 ```bash
 # Flickr30K, GRU as text encoder, evaluate on test split
 python -m main.test --cfg config/f30k/gru.yaml --split test \
     MODEL.weights <directory to the checkpoint file>
+```
 
