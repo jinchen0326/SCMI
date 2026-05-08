@@ -1,5 +1,5 @@
 # Introduction
-Implementation of the paper [Structured Semantic Modeling and Cross-Modal Interaction for Robust Image-Text Matching]. The contributing journals are The Visual Computer.
+Implementation of the paper [Structured Semantic Modeling and Cross-Modal Interaction for Robust Image-Text Matching].
 The full source code will be released publicly upon acceptance of the paper.
 # Prerequisites
 ## Environment
